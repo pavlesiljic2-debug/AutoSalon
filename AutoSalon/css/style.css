@@ -1,0 +1,261 @@
+/* Auto Salon Theme */
+:root{
+    --primary:#dc3545; /* vibrant red for auto theme */
+    --secondary:#0d6efd; /* bootstrap blue accents */
+    --bg:#0b0c10; /* dark asphalt */
+    --surface:#121417; /* cards */
+    --muted:#9aa0a6;
+    --text:#e6e6e6;
+    --success:#28a745;
+    --warning:#ffc107;
+    --footer-h:64px;
+}
+
+body{
+    background:linear-gradient(180deg, #0b0c10 0%, #111317 100%);
+    color:var(--text);
+    font-family: "Segoe UI", Roboto, Inter, Arial, sans-serif;
+    padding-bottom:0; /* handled by flex wrapper */
+}
+
+.navbar{
+    background:rgba(0,0,0,.75)!important;
+    backdrop-filter:saturate(160%) blur(10px);
+}
+
+.navbar .nav-link, .navbar .navbar-brand{color:#fff!important}
+.navbar .nav-link:hover{color:var(--primary)!important}
+
+.btn{border-radius:10px}
+.btn-primary{background:var(--primary) !important; border-color:var(--primary) !important;} 
+.btn-outline-primary{color:var(--primary) !important; border-color:var(--primary) !important;} 
+.btn-outline-primary:hover{background:var(--primary) !important; color:#fff !important;}
+.btn-light{color:#111}
+.btn-secondary{background:#22252b; border-color:#2a2e35; color:#e2e6ea}
+.btn-secondary:hover{background:#2a2e35; border-color:#343941}
+
+.card{
+    background:var(--surface);
+    border:1px solid rgba(255,255,255,.06) !important;
+    box-shadow:0 10px 30px rgba(0,0,0,.35) !important;
+    border-radius:14px;
+}
+.card .card-header{background:transparent; border-bottom:1px solid rgba(255,255,255,.08)}
+.card .card-body{padding:1.25rem 1.25rem}
+.card .card-title{color:#f1f3f5}
+.card .card-text, .card small, .card .text-muted{color:#c3c8d0!important}
+.card .card-body, .card .list-group-item{color:#dfe3e8}
+.card .card-body strong{color:#f6f7f9}
+.card .card-header h4, .card .card-header h5{color:#f1f3f5}
+.card a{color:#9ec5fe}
+.card a:hover{color:#cfe2ff}
+
+/* Darken all light backgrounds */
+.bg-white, .bg-light, .bg-body, .bg-body-tertiary, .offcanvas, .dropdown-menu, .modal-content{
+    background:var(--surface) !important;
+    color:var(--text) !important;
+}
+.list-group-item{background:var(--surface); color:var(--text); border-color:rgba(255,255,255,.06)}
+
+.badge.bg-danger{background:#ff4d6d !important}
+
+.hero{background:radial-gradient(60% 60% at 20% 10%, rgba(220,53,69,.18), transparent), radial-gradient(60% 60% at 80% 0%, rgba(13,110,253,.18), transparent); border-radius:18px;}
+.hero h1{font-weight:800; letter-spacing:.5px}
+.hero .lead{color:var(--muted)}
+
+.section-title{font-weight:700;}
+.footer{color:#97a3b6}
+.table thead th{background:var(--surface); position:sticky; top:0; z-index:1}
+.input-group .btn{min-width:40px}
+.list-group-item-action:hover{background:rgba(220,53,69,.08)}
+
+/* Links */
+a{color:#9ec5fe}
+a:hover{color:#cfe2ff}
+
+/* Forms */
+.form-control, .form-select, .form-check-input, .input-group-text, .form-control:disabled, .form-select:disabled{
+    background:#1a1d22;
+    border:1px solid rgba(255,255,255,.12);
+    color:var(--text);
+}
+.form-control::placeholder{color:#99a1ad}
+.form-control:focus, .form-select:focus{
+    background:#1a1d22;
+    color:var(--text);
+    border-color: rgba(220,53,69,.55);
+    box-shadow: 0 0 0 .25rem rgba(220,53,69,.22);
+}
+
+/* Dropdown */
+.dropdown-menu{
+    background:var(--surface)!important;
+    color:var(--text)!important;
+    border:1px solid rgba(255,255,255,.06)!important;
+    box-shadow:0 10px 30px rgba(0,0,0,.45)!important;
+}
+.dropdown-item{color:#e6e6e6}
+.dropdown-item:hover{background:rgba(255,255,255,.06); color:#fff}
+
+/* Alerts - dark friendly */
+.alert{border:1px solid rgba(255,255,255,.12)}
+.alert-primary{background:rgba(13,110,253,.12); color:#cfe2ff; border-color:rgba(13,110,253,.25)}
+.alert-success{background:rgba(25,135,84,.12); color:#bde5d1; border-color:rgba(25,135,84,.25)}
+.alert-warning{background:rgba(255,193,7,.12); color:#ffe69c; border-color:rgba(255,193,7,.25)}
+.alert-danger{background:rgba(220,53,69,.12); color:#f1b0b7; border-color:rgba(220,53,69,.25)}
+
+/* Tables */
+.table{color:#e0e3e7; background:var(--surface)!important}
+.table thead th{background:var(--surface)!important; color:#eef1f4}
+.table tbody tr, .table tr, .table td, .table th{background:var(--surface)!important; color:#e0e3e7}
+.table-striped>tbody>tr:nth-of-type(odd)>*{--bs-table-accent-bg:#15181d!important; color:#dde1e6}
+.table-hover>tbody>tr:hover>*{--bs-table-accent-bg:#1a1e23!important; color:#ffffff}
+.table>:not(caption)>*>*{border-color:rgba(255,255,255,.08)}
+
+/* Breadcrumb */
+.breadcrumb{--bs-breadcrumb-divider: ">"; color:#9aa0a6}
+.breadcrumb .breadcrumb-item a{color:#cfe2ff}
+.breadcrumb .breadcrumb-item.active{color:#9aa0a6}
+
+/* HR */
+hr{border-top:1px solid rgba(255,255,255,.08)}
+
+/* Footer */
+footer{background:transparent}
+.footer-links a{color:#9ec5fe}
+/* Layout wrapper to keep footer at bottom without overlap */
+html, body { height:100%; }
+.page-container { min-height:100vh; display:flex; flex-direction:column; }
+.page-content { flex:1 0 auto; }
+
+footer{ width:100%; background:transparent; border-top:1px solid rgba(255,255,255,.06); }
+
+/* Vehicle cards hover lift & image zoom */
+.card:hover{transform:translateY(-6px); transition:transform .25s ease, box-shadow .25s ease; box-shadow:0 16px 40px rgba(0,0,0,.45) !important}
+.card img{transition:transform .4s ease}
+.card:hover img{transform:scale(1.03)}
+
+/* Badge price pill */
+.badge-price{background:rgba(40,167,69,.15); color:#bde5d1; border:1px solid rgba(40,167,69,.35); padding:.4rem .6rem; border-radius:999px}
+
+/* Section headings */
+h1,h2,h3,h4{color:#f1f3f5}
+p.lead{color:#adb5bd}
+
+/* General text contrast helpers */
+.text-muted{color:#bfc5cf!important}
+.text-secondary{color:#cbd1d8!important}
+label, .form-label{color:#e6e6e6}
+
+/* Ensure modal always overlays */
+.modal{position:fixed}
+.modal-backdrop.show{opacity:.65}
+
+
+/* Navbar dropdown z-index fix */
+.navbar .dropdown-menu {
+    z-index: 1050 !important;
+    position: absolute !important;
+}
+
+/* Ensure main content doesn't overlap with navbar */
+body {
+    padding-top: 0;
+}
+
+/* Fix for navbar dropdown positioning */
+.navbar-nav .dropdown-menu {
+    z-index: 1050;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure cards and other content have proper z-index */
+.card {
+    position: relative;
+    z-index: 1;
+}
+
+/* Additional navbar fixes */
+.navbar {
+    position: relative;
+    z-index: 1030;
+}
+
+.navbar-nav .nav-item {
+    position: relative;
+}
+
+/* Fix for dropdown menu positioning */
+.dropdown-menu {
+    z-index: 1050 !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: none !important;
+}
+
+/* Ensure main content has proper spacing */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* FORCE dropdown to be above everything - stronger rules */
+.navbar .dropdown-menu {
+    z-index: 99999 !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: none !important;
+    display: none !important;
+}
+
+.navbar .dropdown-menu.show {
+    display: block !important;
+    z-index: 99999 !important;
+}
+
+/* Keep stacking context simple - rely on modal/dropdown z-index */
+
+/* Override any conflicting styles */
+.dropdown-menu {
+    z-index: 99999 !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    border: 1px solid rgba(0,0,0,.15) !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175) !important;
+}
+
+/* Ensure navbar is always on top */
+.navbar {
+    position: relative !important;
+    z-index: 10000 !important;
+}
+
+.navbar-nav .nav-item {
+    position: relative !important;
+    z-index: 10001 !important;
+}
+
+.navbar-nav .dropdown {
+    position: relative !important;
+    z-index: 10002 !important;
+}
+
+/* Ensure Bootstrap modals appear above navbar/dropdowns */
+.modal {
+    z-index: 200000 !important;
+}
+.modal-backdrop {
+    z-index: 199000 !important;
+}
